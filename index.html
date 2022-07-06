@@ -1,6 +1,4 @@
-<!DOCTYPE html>
 <html lang="pr-BR">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,65 +7,23 @@
         <title>Conversor de Moedas</title>
     </head>
     <body>
-        <div class="container">
-            <h1 class="page-title">
-                Conversor de moedas
-            </h1>
-            <p class="page-subtitle">
-                Descubra os valores convertidos
-            </p>
-            <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg"
-                class="page-logo" alt=""><br><br>
-            <label for="moeda">Insira o valor em Dólar</label><br>
-            <input type="number" id="valor" size="2" /><br>
-            <button type="submit" class="botaoDolar" onclick="Converter()">Converter</button><br>
-            <h2 id="valorConvertidoReal"></h2> <br>
-            <label for="euro">Insira o valor em Euro</label><br>
-            <input type="number" id="valor" size="2" /><br>
-            <button type="submit" class="botaoEuro" onclick="ConverterEuro()">Converter</button>
-            <h2 id="valorConvertidoEuro"></h2> <br>
-            <label for="Libras">Insira o valor em Libras</label><br>
-            <input type="number" id="valor" size="2" /><br>
-            <button type="submit" class="botaoLibras" onclick="ConverterLibras()">Converter</button>
-            <h2 id="valorConvertidoLibras"></h2>
-            <h2 id="valorConvertidoBitcoin"></h2>
-            <a href="https://alura.com.br/" target="_blank">
-                <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-            </a>
+    <div class="container">
+    <h1 class="page-title">Conversor de moedas</h1>
+        <p class="page-subtitle">Descubra os valores convertidos</p>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt=""><br><br>
+        <label for="moeda">Insira o valor</label><br>
+        <input type="number" id="valor" size="2" /><br>
+        <label for="euro">Converter o valor em Dólar</label><br>
+        <button type="submit" class="botaoDolar" onclick="Converter()">Converter</button><br>
+        <h2 id="valorConvertidoReal"></h2> <br>
+        <label for="euro">Converter o valor em Euro</label><br>
+        <button type="submit" class="botaoEuro" onclick="ConverterEuro()">Converter</button>
+        <h2 id="valorConvertidoEuro"></h2> <br>
+        <label for="Libras">Converter o valor em Libras</label><br>
+        <button type="submit" class="botaoLibras" onclick="ConverterLibras()">Converter</button>
+        <h2 id="valorConvertidoLibras"></h2>
+        <a href="https://alura.com.br/" target="_blank">
+        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+        </a>
     </body>
-
-    <script>
-    function Converter() {
-        var valorElemento = document.getElementById("valor");
-        var valor = valorElemento.value;
-        var valorEmDolar = parseFloat(valor);
-        var valorEmReal = valorEmDolar * 5.04;
-        var varlorConvertidoDolarEmReal = document.getElementById("valorConvertidoReal")
-        var mostrarValorEmReal = "O valor de Dólar para real é R$ " + valorEmReal;
-        varlorConvertidoDolarEmReal.innerHTML = mostrarValorEmReal;
-        console.log(valorEmReal);
-}
-
-    function ConverterEuro() {
-        var valorElemento = document.getElementById("valor");
-        var valor = valorElemento.value;
-        var valorEmDolar = parseFloat(valor);
-        var valorEmReal = valorEmDolar * 5.54;
-        var varlorConvertidoDolarEmReal = document.getElementById("valorConvertidoEuro")
-        var mostrarValorEmReal = "O valor de Euro para real é R$ " + valorEmReal;
-        varlorConvertidoDolarEmReal.innerHTML = mostrarValorEmReal;
-        console.log(valorEmReal);
-    }
-
-    function ConverterLibras() {
-        var valorElemento = document.getElementById("valor");
-        var valor = valorElemento.value;
-        var valorEmDolar = parseFloat(valor);
-        var valorEmReal = valorEmDolar * 6.60;
-        var varlorConvertidoDolarEmReal = document.getElementById("valorConvertidoLibras")
-        var mostrarValorEmReal = "O valor de Libras para reais é  de R$ " + valorEmReal;
-        varlorConvertidoDolarEmReal.innerHTML = mostrarValorEmReal;
-        console.log(valorEmReal);
-        }
-    </script>
 </html>
